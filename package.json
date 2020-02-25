@@ -1,20 +1,12 @@
 {
   "name": "11ty-dashboard",
-  "version": "1.0.0",
   "description": "This Week in Eleventy dashboard",
-  "main": "index.js",
-  "scripts": {
-    "build": "eleventy",
-    "dev": "npm run build && npm run format:output",
-    "this-week-in-eleventy": "node scripts/this-week-in-eleventy",
-    "format:input": "npx prettier 'src/**/*.{js,json}' 'utils/*.js' 'lib/*.js' '*.js' --write",
-    "format:output": "npx prettier 'www/**/*.html' --write",
-    "serve": "npm run build -- --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": ["11ty", "eleventy"],
+  "version": "1.0.0",
   "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
-  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/pdehaan/11ty-dashboard/issues"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@octokit/rest": "^17.0.0",
@@ -25,5 +17,25 @@
     "lodash": "^4.17.15",
     "luxon": "^1.22.0",
     "markdown-it": "^10.0.0"
+  },
+  "homepage": "https://github.com/pdehaan/11ty-dashboard#readme",
+  "keywords": [
+    "11ty",
+    "eleventy"
+  ],
+  "license": "MPL-2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/11ty-dashboard.git"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "dev": "npm run build && npm run format:output",
+    "format:input": "npx prettier 'src/**/*.{js,json}' 'utils/*.js' 'lib/*.js' '*.js' --write",
+    "format:output": "npx prettier 'www/**/*.html' --write",
+    "serve": "npm run build -- --serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "this-week-in-eleventy": "node scripts/this-week-in-eleventy"
   }
 }
