@@ -1,0 +1,29 @@
+{
+  "name": "11ty-dashboard",
+  "version": "1.0.0",
+  "description": "This Week in Eleventy dashboard",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "npm run build && npm run format:output",
+    "this-week-in-eleventy": "node scripts/this-week-in-eleventy",
+    "format:input": "npx prettier 'src/**/*.{js,json}' 'utils/*.js' 'lib/*.js' '*.js' --write",
+    "format:output": "npx prettier 'www/**/*.html' --write",
+    "serve": "npm run build -- --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["11ty", "eleventy"],
+  "author": "Peter deHaan <peter@deseloper.com> (https://about.me/peterdehaan)",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@octokit/rest": "^17.0.0",
+    "axios": "^0.19.2",
+    "clean-text-utils": "^1.1.17",
+    "htmlparser2": "^4.0.0",
+    "linkify-issues": "^2.0.0",
+    "lodash": "^4.17.15",
+    "luxon": "^1.22.0",
+    "markdown-it": "^10.0.0"
+  }
+}

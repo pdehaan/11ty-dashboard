@@ -1,0 +1,16 @@
+<hr/>
+<section class="recent-releases">
+  {% if recentReleases.size != 0 %}
+    <h2>Recent Releases</h2>
+    {% for release in recentReleases %}
+      <h3>{{ release.name }}</h3>
+      <p>{% time release.published_at %}</p>
+      {{ release.releasenotes }}
+    {% endfor %}
+  {% else %}
+    <h2>Latest Release</h2>
+    <h3>{{ latestRelease.name }}</h3>
+    <p>{{ latestRelease.releasenotes | strip_html | truncatewords: 50, "…" }}</p>
+    <p>{% time latestRelease.published_at %}</p>
+  {% endif %}
+</section>

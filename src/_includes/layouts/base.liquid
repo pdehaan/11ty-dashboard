@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: serif;
+    }
+    time {
+      color: #999;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">{{ content | strip }}</div>
+
+</body>
+</html>

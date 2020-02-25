@@ -1,0 +1,284 @@
+{
+  "github": {
+    "owner": "11ty",
+    "repo": "eleventy"
+  },
+  "startDate": "2020-02-16T08:00:00.000Z",
+  "endDate": "2020-02-24T03:36:04.282Z",
+  "latestNews": {
+    "id": "https://www.11ty.dev/news/stickers/",
+    "title": "Eleventy Documentation",
+    "link": "https://www.11ty.dev/news/stickers/",
+    "description": "<p>In order to minimize administrative overhead, to receive an Eleventy sticker you must find someone with Eleventy stickers and ask for one. Verbally. In person. They are not distributed on conference sticker tables. They are not mailed. They are not shipped. They travel only by sneakernet.</p>\n<p>Our current list of Eleventy Sticker Ambassadors includes:</p>\n<ul>\n<li><a href=\"https://zachleat.com/\"><picture><source srcset=\"https://www.11ty.dev/img/avatar-local-cache/twitter/zachleat.webp\" type=\"image/webp\"><img src=\"https://www.11ty.dev/img/avatar-local-cache/twitter/zachleat.jpg\" alt=\"zachleat’s twitter avatar\" loading=\"lazy\" class=\"avatar\"></picture>Zach Leatherman</a> (👋🏻 hi)</li>\n<li><a href=\"https://www.matuzo.at/\"><picture><source srcset=\"https://www.11ty.dev/img/avatar-local-cache/twitter/mmatuzo.webp\" type=\"image/webp\"><img src=\"https://www.11ty.dev/img/avatar-local-cache/twitter/mmatuzo.jpg\" alt=\"mmatuzo’s twitter avatar\" loading=\"lazy\" class=\"avatar\"></picture>Manuel Matuzović</a></li>\n</ul>\n<p>This list of Sticker Ambassadors may expand as time goes on. You will need to find out which meetups/conferences/events our Sticker Ambassadors are going to, attend those events, and <em>talk to them</em>! As an introvert, I know this is terrible (sorry).</p>",
+    "pubDate": "2020-02-05T00:00:00.000Z"
+  },
+  "recentNews": [],
+  "latestRelease": {
+    "name": "Eleventy v0.10.0: New year new me",
+    "tag_name": "v0.10.0",
+    "url": "https://github.com/11ty/eleventy/releases/tag/v0.10.0",
+    "author": "zachleat",
+    "created_at": "2020-01-07T21:06:50.000Z",
+    "published_at": "2020-01-07T21:53:56.000Z",
+    "releasenotes": "<h2>A special note of remembrance Before we get going here I just want to take a brief moment to remember the very special @jameswillweb who <a href=\"https://twitter.com/justinseeley/status/1201964060658585600\">passed away earlier this month</a>. James was <a href=\"http://simpleprimate.com/blog/long-goodbye\">diagnosed with ALS in 2013</a> and was known for his widespread teaching contributions to the web community. Probably the least of which, but one that I will always remember, was his creation of the floating possum mascot for our little Eleventy project. This mascot (nay, mastcot, because it lives in the masthead ok fine but James would have liked that one) lives at the top of the Eleventy docs and links to the <a href=\"https://twitter.com/jameswillweb/status/999052022497316865\">Twitter thread he started in 2018</a>. Though we never met in real life, James was clearly a one-of-a-kind. We will miss you Donations may be made in James name to <a href=\"https://www.als.net/\">The ALS Therapy Development Institute</a> or to <a href=\"http://stjohnsrh.org/\">Quest Youth Ministries at St. John's United Methodist Church</a>. <em>Permalink: https://www.11ty.dev/news/james-williamson/</em> ## <a href=\"https://v0-10-0.11ty.dev/docs/\">v0.10.0 Documentation</a> ### Installation * Install to your Local project (preferred): <code>npm install @11ty/eleventy</code> * Already installed in your local project? Upgrade your version: <code>npm update @11ty/eleventy</code> * Want to install globally? <code>npm install -g @11ty/eleventy</code> * Already installed globally? Upgrade your Global version: <code>npm update -g @11ty/eleventy</code> * <em>Read more about <a href=\"https://v0-10-0.11ty.io/docs/global-installation/\">local versus global installation</a></em> ### <a href=\"https://www.11ty.dev/docs/how-to-support/\">How can you support Eleventy?</a> * Starring us on GitHub! This will increase our projects visibility on <a href=\"https://www.staticgen.com/\">staticgen.com</a>, a big giant list of static site generators. * Follow us on <a href=\"https://twitter.com/eleven_ty\">Twitter @eleven_ty</a>! * Join 62 other lovely people and become an <a href=\"https://www.11ty.io/docs/supporters/\">Eleventy Supporter</a>! Thank you to the code contributors that helped with this release: @gloryofrobots @edbrannin @madebymike @Ryuno-Ki @cschuller @micahmills @fredrikekelund @ahl @Munter @saenglert (and @zachleat, I guess) ## Features ### Official Plugins * Adds new official Navigation Plugin for hierarchical site navigation and breadcrumbs #419 #210 https://github.com/11ty/eleventy-navigation * Documentation: https://www.11ty.dev/docs/plugins/navigation/ * New major version of <code>eleventy-plugin-syntaxhighlight</code>, only opt-in to line wrapping markup if line highlighting features are used. Read more: https://github.com/11ty/eleventy-plugin-syntaxhighlight/releases/tag/v3.0.0 * Documentation: https://www.11ty.dev/docs/plugins/syntaxhighlight/ ### Configuration API * Support for arbitrary data file formats in the Data Cascade. e.g. <code>eleventyConfig.addDataExtension(&quot;yaml&quot;, contents =&gt; yaml.safeLoad(contents));</code> Thank you @gloryofrobots! #736 #798 #635 #630 #624 #265 * Documentation pending * Adds <code>setQuietMode</code> method to Configuration API so that we dont have to type <code>--quiet</code> all the time. #808 * Adds <code>addWatchTarget</code> method to Configuration API for programmatic watching of arbitrary files. Thanks @MadeByMike! #803 #641 * Show <code>pathPrefix</code> being used in standard console output (if non-default). #807 * Adds <code>getFilteredByTags</code> to Collection API #708 #711 #830 ### Pagination * Adds a <code>before</code> callback option to pagination to allow you to modify the data prior to it being paginated. Very powerful! #699 * Documentation: https://www.11ty.dev/docs/pagination/#the-before-callback * Adds <code>pagination.alias</code> and <code>pagination.pages</code> options to pagination variable. These will help when creating navigation for your pagination. #280 #345 #334 #211 * Documentation: https://www.11ty.dev/docs/pagination/nav/ ### Performance * <code>dependency-tree</code> npm package used to find JavaScript dependencies was slow. https://www.11ty.dev/docs/config/#watch-javascript-dependencies Wrote https://github.com/11ty/eleventy-dependency-tree to solve this. One major difference here is that dependencies now will be <code>required</code> to resolveso be aware of this if your node files arent idempotent! This pays off in a huge performance boost when using <code>--watch</code> or <code>--serve</code>. #700 ### Shortcodes * Better support for asynchronous shortcodes (shortcode functions can return promises). Supported in <code>11ty.js</code>, Liquid, and Nunjucks templates. #672 #429 * Documentation updated: * https://www.11ty.dev/docs/shortcodes/ * https://www.11ty.dev/docs/languages/javascript/ * https://www.11ty.dev/docs/languages/liquid/ * https://www.11ty.dev/docs/languages/nunjucks/ * https://www.11ty.dev/docs/languages/handlebars/#asynchronous-helpers (not supported in Handlebars but the docs were updated to reflect this) ### Miscellanous * JSDoc annotations added to Eleventy.js. Thanks @Ryuno-Ki! #582 ## Documentation Web Site * <a href=\"https://www.11ty.dev/docs/how-to-support/#step-3-contribute-on-open-collective\">We launched Contributor Accounts on 11ty.dev</a>, including access to <a href=\"https://www.11ty.dev/docs/search/\">on-site documentation search</a>. * <a href=\"https://www.11ty.dev/news/moving-house/\">Documentation moved from 11ty.io to 11ty.dev</a> * <a href=\"https://www.11ty.dev/docs/plugins/\">Official Eleventy plugin documentation moved to 11ty.dev</a> * @Munter added his <a href=\"https://www.npmjs.com/package/hyperlink\"><code>hyperlink</code></a> checker to the 11ty documentation for link rot checking! <a href=\"https://twitter.com/eleven_ty/status/1200492770252787714\">Source tweet</a> ## Bug fixes * Improved error reporting in shortcode code. #681 * Issue with <code>Cannot read property 'trim' of undefined</code> error on unhandledRejection events. #689 * Fix for <code>require</code> node cache busting on Windows (some JavaScript files may not have picked up changes when watching) #341 #596 #683 Thanks @cschuller! * Fix bug with negated entries (<code>!</code>) in .gitignore or .eleventyignore files. The bug caused Eleventy to not process any files. Support was <em>not</em> added for negated entriesthey are ignored for now. Thanks @micahmills! #677 #709 * Fix to Sortable implementation, improved teststhanks @edbrannin! #747 * Fix small variable scoping issue in TemplateWriterthanks @fredrikekelund! #724 #722 * Fix data bleed issue in the Data Cascade with front matter and <code>setDataDeepMerge</code>. Thanks @ahl! #676 #735 * Improved test coverage for <code>EleventyErrorUtil</code>thank you @edbrannin! #753 ## Administration * <a href=\"https://github.com/11ty/eleventy/milestone/30?closed=1\">Issues fixed in v0.10.0 Milestone</a> * <a href=\"https://github.com/11ty/eleventy/compare/v0.9.0...v0.10.0\">All code changes from v0.9.0 to v0.10.0</a> * <a href=\"https://github.com/11ty/eleventy/blob/v0.10.0/docs/coverage.md\">Code coverage stats for v0.10.0</a> * npm audit passed ### Dependency Major Release Bumps * <a href=\"https://github.com/chalk/chalk/releases/tag/v3.0.0\">chalk from v2.4 to v3.0.0</a> * <a href=\"https://github.com/npm/node-semver/blob/master/CHANGELOG.md#700\">semver v6.3 to v7.1</a>: Drops support for old versions of Node * <a href=\"https://github.com/wycats/handlebars.js/blob/master/release-notes.md#v453---november-18th-2019\">handlebars from v4.1.2 to v4.5.3</a> (while this isnt technically a major release bump, its a fair number of minor releases and probably worth noting)</h2>\n"
+  },
+  "recentReleases": [],
+  "latestTag": {
+    "name": "v0.11.0-beta.1",
+    "zipball_url": "https://api.github.com/repos/11ty/eleventy/zipball/v0.11.0-beta.1",
+    "tarball_url": "https://api.github.com/repos/11ty/eleventy/tarball/v0.11.0-beta.1",
+    "commit": {
+      "sha": "8ead8886a8aedf81ffde318065217c5aae557e76",
+      "url": "https://api.github.com/repos/11ty/eleventy/git/commits/8ead8886a8aedf81ffde318065217c5aae557e76",
+      "html_url": "https://github.com/11ty/eleventy/commit/8ead8886a8aedf81ffde318065217c5aae557e76",
+      "author": {
+        "name": "Zach Leatherman",
+        "email": "zachleatherman@gmail.com",
+        "date": "2020-02-20T16:50:17Z"
+      },
+      "committer": {
+        "name": "Zach Leatherman",
+        "email": "zachleatherman@gmail.com",
+        "date": "2020-02-20T16:50:17Z"
+      },
+      "message": "v0.11.0-beta.1"
+    },
+    "node_id": "MDM6UmVmMTEyMTUwNzc2OnYwLjExLjAtYmV0YS4x"
+  },
+  "recentTags": [
+    {
+      "name": "v0.11.0-beta.1",
+      "zipball_url": "https://api.github.com/repos/11ty/eleventy/zipball/v0.11.0-beta.1",
+      "tarball_url": "https://api.github.com/repos/11ty/eleventy/tarball/v0.11.0-beta.1",
+      "commit": {
+        "sha": "8ead8886a8aedf81ffde318065217c5aae557e76",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/8ead8886a8aedf81ffde318065217c5aae557e76",
+        "html_url": "https://github.com/11ty/eleventy/commit/8ead8886a8aedf81ffde318065217c5aae557e76",
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-20T16:50:17Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-20T16:50:17Z"
+        },
+        "message": "v0.11.0-beta.1"
+      },
+      "node_id": "MDM6UmVmMTEyMTUwNzc2OnYwLjExLjAtYmV0YS4x"
+    }
+  ],
+  "recentCommits": [
+    {
+      "sha": "9c13e4d0fe24efa0fdd8ba9d0d39437b427609d3",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-21T05:22:12.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-21T05:22:12.000Z"
+        },
+        "message": "A few more tests for <a href=\"https://github.com/11ty/eleventy/issues/481\">#481</a>",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/9c13e4d0fe24efa0fdd8ba9d0d39437b427609d3",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/9c13e4d0fe24efa0fdd8ba9d0d39437b427609d3",
+      "html_url": "https://github.com/11ty/eleventy/commit/9c13e4d0fe24efa0fdd8ba9d0d39437b427609d3",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/9c13e4d0fe24efa0fdd8ba9d0d39437b427609d3/comments"
+    },
+    {
+      "sha": "8ead8886a8aedf81ffde318065217c5aae557e76",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-20T16:50:17.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-20T16:50:17.000Z"
+        },
+        "message": "v0.11.0-beta.1",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/8ead8886a8aedf81ffde318065217c5aae557e76",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/8ead8886a8aedf81ffde318065217c5aae557e76",
+      "html_url": "https://github.com/11ty/eleventy/commit/8ead8886a8aedf81ffde318065217c5aae557e76",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/8ead8886a8aedf81ffde318065217c5aae557e76/comments"
+    },
+    {
+      "sha": "d8f941e0e4cf04d47f965d324f29c0683b549b85",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-19T15:49:17.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-19T15:49:17.000Z"
+        },
+        "message": "Fixes <a href=\"https://github.com/11ty/eleventy/issues/481\">#481</a>",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/d8f941e0e4cf04d47f965d324f29c0683b549b85",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/d8f941e0e4cf04d47f965d324f29c0683b549b85",
+      "html_url": "https://github.com/11ty/eleventy/commit/d8f941e0e4cf04d47f965d324f29c0683b549b85",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/d8f941e0e4cf04d47f965d324f29c0683b549b85/comments"
+    },
+    {
+      "sha": "99396db66d181dfaa15c0e8c5edf9e34421ef895",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-19T02:58:59.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-19T02:58:59.000Z"
+        },
+        "message": "Attempt to fix <a href=\"https://github.com/11ty/eleventy/issues/899\">#899</a>",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/99396db66d181dfaa15c0e8c5edf9e34421ef895",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/99396db66d181dfaa15c0e8c5edf9e34421ef895",
+      "html_url": "https://github.com/11ty/eleventy/commit/99396db66d181dfaa15c0e8c5edf9e34421ef895",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/99396db66d181dfaa15c0e8c5edf9e34421ef895/comments"
+    },
+    {
+      "sha": "1059f8bc698506751ffcbf33ab3a5e05b55bdb78",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-19T02:33:38.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-19T02:33:38.000Z"
+        },
+        "message": "Issue <a href=\"https://github.com/11ty/eleventy/issues/947\">#947</a>",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/1059f8bc698506751ffcbf33ab3a5e05b55bdb78",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/1059f8bc698506751ffcbf33ab3a5e05b55bdb78",
+      "html_url": "https://github.com/11ty/eleventy/commit/1059f8bc698506751ffcbf33ab3a5e05b55bdb78",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/1059f8bc698506751ffcbf33ab3a5e05b55bdb78/comments"
+    },
+    {
+      "sha": "4b09b43e5595fe736e6f3baf3feb4a915c9a7515",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-17T04:16:03.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-17T04:16:03.000Z"
+        },
+        "message": "Fixes <a href=\"https://github.com/11ty/eleventy/issues/941\">#941</a>, Fixes <a href=\"https://github.com/11ty/eleventy/issues/816\">#816</a>, Fixes <a href=\"https://github.com/11ty/eleventy/issues/289\">#289</a>.",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/4b09b43e5595fe736e6f3baf3feb4a915c9a7515",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/4b09b43e5595fe736e6f3baf3feb4a915c9a7515",
+      "html_url": "https://github.com/11ty/eleventy/commit/4b09b43e5595fe736e6f3baf3feb4a915c9a7515",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/4b09b43e5595fe736e6f3baf3feb4a915c9a7515/comments"
+    },
+    {
+      "sha": "55e92c2abb60455be6f14dcbfe28b4b7dbdfa43e",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-16T19:51:23.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-16T19:51:23.000Z"
+        },
+        "message": "Note about relevant issue <a href=\"https://github.com/11ty/eleventy/issues/934\">#934</a>",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/55e92c2abb60455be6f14dcbfe28b4b7dbdfa43e",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/55e92c2abb60455be6f14dcbfe28b4b7dbdfa43e",
+      "html_url": "https://github.com/11ty/eleventy/commit/55e92c2abb60455be6f14dcbfe28b4b7dbdfa43e",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/55e92c2abb60455be6f14dcbfe28b4b7dbdfa43e/comments"
+    },
+    {
+      "sha": "cde29307ef06722e5708e373f9ba6b38c11db018",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-16T19:47:04.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-16T19:47:04.000Z"
+        },
+        "message": "Uncomment test for <a href=\"https://github.com/11ty/eleventy/issues/446\">#446</a>",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/cde29307ef06722e5708e373f9ba6b38c11db018",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/cde29307ef06722e5708e373f9ba6b38c11db018",
+      "html_url": "https://github.com/11ty/eleventy/commit/cde29307ef06722e5708e373f9ba6b38c11db018",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/cde29307ef06722e5708e373f9ba6b38c11db018/comments"
+    },
+    {
+      "sha": "0bd6576d0374400e9b6ea10d409f0fad801a4832",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-16T19:46:37.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-16T19:46:37.000Z"
+        },
+        "message": "Get a layout chain from a template. Work preparing for the incremental data graph. Also fixes <a href=\"https://github.com/11ty/eleventy/issues/915\">#915</a>.",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/0bd6576d0374400e9b6ea10d409f0fad801a4832",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/0bd6576d0374400e9b6ea10d409f0fad801a4832",
+      "html_url": "https://github.com/11ty/eleventy/commit/0bd6576d0374400e9b6ea10d409f0fad801a4832",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/0bd6576d0374400e9b6ea10d409f0fad801a4832/comments"
+    },
+    {
+      "sha": "5f57ce0b597c27b765cd05b5e70ef3f774ab3739",
+      "commit": {
+        "author": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-16T19:35:03.000Z"
+        },
+        "committer": {
+          "name": "Zach Leatherman",
+          "email": "zachleatherman@gmail.com",
+          "date": "2020-02-16T19:35:03.000Z"
+        },
+        "message": "Look into cjs files to find watch target dependencies",
+        "url": "https://api.github.com/repos/11ty/eleventy/git/commits/5f57ce0b597c27b765cd05b5e70ef3f774ab3739",
+        "comment_count": 0
+      },
+      "url": "https://api.github.com/repos/11ty/eleventy/commits/5f57ce0b597c27b765cd05b5e70ef3f774ab3739",
+      "html_url": "https://github.com/11ty/eleventy/commit/5f57ce0b597c27b765cd05b5e70ef3f774ab3739",
+      "comments_url": "https://api.github.com/repos/11ty/eleventy/commits/5f57ce0b597c27b765cd05b5e70ef3f774ab3739/comments"
+    }
+  ]
+}

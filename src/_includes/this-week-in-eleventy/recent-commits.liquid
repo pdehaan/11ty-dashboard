@@ -1,0 +1,11 @@
+<hr />
+<section class="recent-commits">
+  {% if recentCommits.size != 0 %}
+    <h2>Recent Commits</h2>
+    <ul>
+    {% for commit in recentCommits %}
+      <li>[<code>{{ commit.sha | slice: 0, 7 }}</code>] {{ commit.commit.message }} &mdash; {% time commit.commit.committer.date %}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</section>

@@ -1,0 +1,16 @@
+<hr />
+<section class="recent-news">
+  {% if recentNews.size != 0 %}
+    <h2>Recent News</h2>
+    {% for news in recentNews %}
+      <h3>{{ news.title }}</h3>
+      {{ news.description }}
+      <p>{% time news.pubDate %}</p>
+    {% endfor %}
+  {% else %}
+    <h2>Latest News</h2>
+    <h3>{{ latestNews.title }}</h3>
+    <p>{{ latestNews.description | strip_html | truncatewords: 50, "…" }}</p>
+    <p>{% time latestNews.pubDate %}</p>
+  {% endif %}
+</section>

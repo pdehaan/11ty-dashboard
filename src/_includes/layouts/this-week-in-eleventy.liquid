@@ -1,0 +1,17 @@
+---
+layout: layouts/base.liquid
+---
+
+<main class="content this-week-in-eleventy">
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+
+  <article>{{ content | strip }}</article>
+
+  {% include this-week-in-eleventy/recent-news.liquid %}
+  {% include this-week-in-eleventy/recent-releases.liquid %}
+  {% include this-week-in-eleventy/recent-tags.liquid %}
+  {% include this-week-in-eleventy/recent-commits.liquid %}
+  {% include this-week-in-eleventy/documentation.liquid %}
+</main>

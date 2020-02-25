@@ -1,0 +1,14 @@
+<hr />
+<section class="recent-tags">
+  {% if recentTags.size != 0 %}
+    <h2>Recent Tags</h2>
+    {% for tag in recentTags %}
+      <h3>{{ tag.name }}</h3>
+      <p>{% time tag.commit.author.date %}</p>
+    {% endfor %}
+  {% else %}
+    <h2>Latest Tag</h2>
+    <h3>{{ latestTag.name }}</h3>
+    <p>{% time latestTag.commit.author.date %}</p>
+  {% endif %}
+</section>
