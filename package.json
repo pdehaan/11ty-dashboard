@@ -16,7 +16,7 @@
     "linkify-issues": "^2.0.0",
     "lodash": "^4.17.21",
     "luxon": "^1.22.0",
-    "markdown-it": "^10.0.0"
+    "markdown-it": "^12.3.2"
   },
   "homepage": "https://github.com/pdehaan/11ty-dashboard#readme",
   "keywords": [
